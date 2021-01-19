@@ -17,9 +17,9 @@ class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
-        思路：双指针
-        left： 左侧均为非零数字
-        right：一直遍历数组, nums[right] 指向非零，交换左右指针
+        思路：双指针，
+        left： left 指向 0
+        right：遇到非零交换到左侧， 0 位于右侧
         """
         left, right = 0, 0
         while right < len(nums):
