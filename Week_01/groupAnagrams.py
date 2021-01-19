@@ -24,6 +24,9 @@ class Solution:
         """
         思路：计数法
         用一个 26位数字表示 str，判断是否为异位字符串
+        注意：
+            1。 字典的值 必须转成  tuple， 才可以hash， 作为字典的 key
+            2。 defaultdict 可初始化默认的 List，可以使用 List append的方法
         """
         ans = collections.defaultdict(list)
         for s in strs:
