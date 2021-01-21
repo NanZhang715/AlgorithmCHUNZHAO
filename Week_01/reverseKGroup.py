@@ -41,10 +41,11 @@ class Solution:
 
             tmp, count = None, 0  # 创建两个临时变量
             while cur and count < k:
-                tmp = cur.next
-                cur.next = prev
-                prev = cur
-                cur = tmp
+                # tmp = cur.next
+                # cur.next = prev
+                # prev = cur
+                # cur = tmp
+                cur.next, prev, cur = prev, cur, cur.next
                 count += 1
 
             # 连接前一段链表
