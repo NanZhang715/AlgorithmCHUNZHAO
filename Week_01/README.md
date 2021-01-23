@@ -9,17 +9,23 @@
 - [移动零（Facebook、亚马逊、苹果在半年内面试中考过）](moveZeroes.py)
 - [加一（谷歌、字节跳动、Facebook 在半年内面试中考过）](plusOne.py)
 - [有效的字母异位词（亚马逊、Facebook、谷歌在半年内面试中考过）](isAnagram.py)
-
+- [爬楼梯（阿里巴巴、腾讯、字节跳动在半年内面试常考](Climbing Stairs.py)
+- [反转链表（字节跳动、亚马逊在半年内面试常考）](reverseList.py)
+- [两两交换链表中的节点（阿里巴巴、字节跳动在半年内面试常考）](swapPairs.py)
+- [环形链表（阿里巴巴、字节跳动、腾讯在半年内面试常考）](hasCycle.py)
+- 有效的括号（亚马逊、JPMorgan 在半年内面试常考）
+- 最小栈（亚马逊在半年内面试常考）
+- [删除重复元素](removeDuplicates.py)
 
 **中等题目**
 - 设计循环双端队列（Facebook 在 1 年内面试中考过）
 - [字母异位词分组（亚马逊在半年内面试中常考）](groupAnagrams.py)
-
+- [环形链表 II](detectCycle.py)
 
 **困难题目**
 
  - [接雨水（亚马逊、字节跳动、高盛集团、Facebook 在半年内面试常考](trap.py)
-
+ - [K 个一组翻转链表（字节跳动、猿辅导在半年内面试常考）](reverseKGroup.py)
 
 **学习总结主题**
 
