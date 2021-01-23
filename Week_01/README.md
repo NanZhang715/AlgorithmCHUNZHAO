@@ -27,6 +27,8 @@
 
 - [接雨水（亚马逊、字节跳动、高盛集团、Facebook 在半年内面试常考](trap.py)
 - [K 个一组翻转链表（字节跳动、猿辅导在半年内面试常考）](reverseKGroup.py)
+- [柱状图中最大的矩形（亚马逊、微软、字节跳动在半年内面试中考过）](largestRectangleArea.py)
+- [滑动窗口最大值（亚马逊在半年内面试常考）](maxSlidingWindow.py)
 
 **学习总结主题**
 
