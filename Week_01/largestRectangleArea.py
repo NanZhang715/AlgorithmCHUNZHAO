@@ -31,12 +31,12 @@ class Solution:
               可在栈两端放入 哨兵 Sentinel，元素 0
     """
         max_area, stack = 0, []
-        heights = [0] + heights + [0]
+        heights = [0] + heights + [0]  # 前后加哨兵元素
 
         for k, v in enumerate(heights):
             while stack and heights[stack[-1]] > v:  # 元素大于栈顶元素
                 max_stack_ids = stack.pop()
-                print(stack)
+                print(stack, heights[stack[-1]])
                 max_area = max(max_area, heights[max_stack_ids] * (k - stack[-1] - 1))  # 不算两边只取 中间的距离
             stack.append(k)
         return max_area

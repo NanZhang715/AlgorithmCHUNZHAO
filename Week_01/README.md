@@ -22,13 +22,14 @@
 - 设计循环双端队列（Facebook 在 1 年内面试中考过）
 - [字母异位词分组（亚马逊在半年内面试中常考）](groupAnagrams.py)
 - [环形链表 II](detectCycle.py)
+- [每日温度（单调栈）](dailyTemperatures.py)
 
 **困难题目**
 
 - [接雨水（亚马逊、字节跳动、高盛集团、Facebook 在半年内面试常考](trap.py)
 - [K 个一组翻转链表（字节跳动、猿辅导在半年内面试常考）](reverseKGroup.py)
-- [柱状图中最大的矩形（亚马逊、微软、字节跳动在半年内面试中考过）](largestRectangleArea.py)
-- [滑动窗口最大值（亚马逊在半年内面试常考）](maxSlidingWindow.py)
+- [柱状图中最大的矩形（亚马逊、微软、字节跳动在半年内面试中考过）单调栈 ](largestRectangleArea.py)
+- [滑动窗口最大值（亚马逊在半年内面试常考）单调栈 ](maxSlidingWindow.py)
 
 **学习总结主题**
 
