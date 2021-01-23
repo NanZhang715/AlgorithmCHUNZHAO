@@ -40,4 +40,6 @@
 - 栈：最小栈
 - 队列： 双端队列
 - 优先队列： heap
-- 哈希表， 集合：字典 key 不能使用 List， 需转换成 tuple
+- 哈希表， 集合：
+  - 字典 key 不能使用 List， 需转换成 tuple
+  - collections.defaultdict(list) 实现一个工厂方法的 字典，具有列表的方法 append(s)
