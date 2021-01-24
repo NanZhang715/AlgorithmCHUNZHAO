@@ -36,7 +36,7 @@ class Solution:
             last_node_prev = prev  # 前一段的的最后一个 node
             last_node_sub = cur  # 当前 sublist 的 cur 反转后成为最后一个 node
 
-            if not self.length_larget_k(cur, k):  # 判断接下来的链表是否满足反转的条件
+            if not self.length_larger_k(cur, k):  # 判断接下来的链表是否满足反转的条件
                 break
 
             tmp, count = None, 0  # 创建两个临时变量
@@ -62,7 +62,7 @@ class Solution:
             prev = last_node_sub
         return head
 
-    def length_larget_k(self, head, k):
+    def length_larger_k(self, head, k):
         """
         判断 链表长度是否 大于 k
         """
