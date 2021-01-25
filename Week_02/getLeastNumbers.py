@@ -58,7 +58,7 @@ class Solution:
                 right = pivot - 1
             else:  # pivot 小于 k，左边界不断收缩
                 left = pivot + 1
-            print(pivot, left, right - 1, arr)
+            # print(pivot, left, right - 1, arr)
 
     # def getLeastNumbers_pivot_recursive(self, arr: List[int], k: int) -> List[int]:
     #     """
