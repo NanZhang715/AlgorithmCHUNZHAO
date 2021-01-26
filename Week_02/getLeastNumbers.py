@@ -114,5 +114,5 @@ class Solution:
 if __name__ == '__main__':
     nums, k = [0, 0, 1, 2, 4, 2, 2, 3, 1, 4], 8
     rst = Solution().getLeastNumbers_pivot(nums, k)
-    # rst = Solution().partition(nums, 0, len(nums))
-    print("result is", rst, nums)
+    # rst = Solution().partition(nums, 0, len(nums)-1)
+    print("result is", rst)
