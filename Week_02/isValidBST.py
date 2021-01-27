@@ -33,7 +33,7 @@ class Solution:
                 空间复杂度 O(1)
         """
         prev, stack = float("-inf"), []
-        rst= []
+        # rst= []
         while stack or root:
             if root:
                 stack.append(root)
@@ -45,7 +45,7 @@ class Solution:
                     return False
                 prev = node.val
                 root = node.right
-        return True, rst
+        return True
 
 
 if __name__ == '__main__':
