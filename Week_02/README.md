@@ -7,7 +7,7 @@
 - [最小的 k 个数（字节跳动在半年内面试中考过）](getLeastNumbers.py)
 - [二叉树的最大深度（亚马逊、微软、字节跳动在半年内面试中考过）](maxDepth.py) 
 - [二叉树的最小深度（Facebook、字节跳动、谷歌在半年内面试中考过）](minDepth.py)
-- [翻转二叉树 (谷歌、字节跳动、Facebook 在半年内面试中考过)]
+- [翻转二叉树 (谷歌、字节跳动、Facebook 在半年内面试中考过)](invertTree.py)
 
 **中等题目**
 - [括号生成 (字节跳动在半年内面试中考过)](generateParenthesis.py)
