@@ -28,7 +28,6 @@ def find_subsets_lexi(nums):
     for i in range(2**n, 2**(n+1)):
         bitmask = bin(i)[3:]  # generate bitmask, from 000 to 111
         # print(bitmask)
-
         subsets.append([nums[j] for j in range(n) if bitmask[j] == '1'])
     return subsets
 
