@@ -22,6 +22,7 @@ def find_subsets_bfs(nums):
 def find_subsets_lexi(nums):
     """
     Lexicographic (Binary Sorted) Subsets
+    时间复杂度 O(n)
     """
     subsets = []
     n = len(nums)
