@@ -15,7 +15,7 @@
 - 二叉树的序列化与反序列化（Facebook、亚马逊在半年内面试常考）
 - [二叉树的中序遍历（亚马逊、微软、字节跳动在半年内面试中考过）](inorder.py)
 - [二叉树的前序遍历（谷歌、微软、字节跳动在半年内面试中考过）](preorderTraversal.py)
-- [滑动窗口最大值（亚马逊在半年内面试中常考）to do](maxSlidingWindow.py)
+- 滑动窗口最大值（亚马逊在半年内面试中常考）(maxSlidingWindow.py)
 - N 叉树的层序遍历
 - [丑数（字节跳动在半年内面试中考过）](UglyNumber.py)
 - [前 K 个高频元素（亚马逊在半年内面试中常考）](topKFrequent.py)
@@ -24,11 +24,13 @@
 - [组合（微软、亚马逊、谷歌在半年内面试中考过）](combine.py)
 - [全排列（字节跳动在半年内面试常考）](permute.py)
 - [全排列 II （亚马逊、字节跳动、Facebook 在半年内面试中考过](permuteUnique.py)
-
+- [子集](subset.py)
 
 **学习总结**
+
+- [堆的实现](heap_sort.py)
 - TopK： heap 和 部分快拍， 根据主定理 其中快排的时间复杂度 为O(n)， O
 - 排列组合： 使用 dfs, bfs, 以及必要的剪枝
   - dfs
-  - bfs: 在解决组合问题中有两种解题思路，（1）每次放入将上一层元素中增加下一个元素，即可
+  - subsets 可以使用 bfs 或者 binmask 的方法进行解决
 - 递归
