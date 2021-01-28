@@ -24,7 +24,6 @@
 - [组合（微软、亚马逊、谷歌在半年内面试中考过）](combine.py)
 - [全排列（字节跳动在半年内面试常考）](permute.py)
 - [全排列 II （亚马逊、字节跳动、Facebook 在半年内面试中考过](permuteUnique.py)
-- [子集](subset.py)
 
 **学习总结**
 
@@ -32,5 +31,5 @@
 - TopK： heap 和 部分快拍， 根据主定理 其中快排的时间复杂度 为O(n)， O
 - 排列组合： 使用 dfs, bfs, 以及必要的剪枝
   - dfs
-  - subsets 可以使用 bfs 或者 binmask 的方法进行解决
+  - [subsets 可以使用 bfs 或者 Lexicographic Subsets binmask 的方法进行解决](subset.py)
 - 递归
