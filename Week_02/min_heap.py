@@ -6,10 +6,10 @@
     "A heap is one of the tree structures and represented as a binary tree"
 
 性质：
-    （1）根节点 root， 数组索引从 0 开始， root_node | 0
-    （2）父节点 (i-1)/2, 返回父节点 , parent_node | i/2 -1
-    （3）左节点：left_inidex = (2 * i) + 1,  left_node | 2i + 1
-    （4）右节点：right_inidex = (2 * i) + 2,  right_node | 2i +2
+    （1）根节点 root， 数组索引从 1 开始， root_node | 1
+    （2）父节点 i/2, 返回父节点 , parent_node | i/2 -1
+    （3）左节点：left_inidex = 2 * i,  left_node | 2i
+    （4）右节点：right_inidex = (2 * i) + 1,  right_node | 2i +1
 
 操作：
     （1）heapify: 是该节点以及子节点满足堆的性质
