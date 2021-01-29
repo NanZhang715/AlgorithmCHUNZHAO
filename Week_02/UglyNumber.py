@@ -48,7 +48,7 @@ class Solution:
             min(p2*2, P3*3, P5*5)
         """
         dp = [1] * n
-        p2, p3, p5 = 0, 0, 0  # 索引位置
+        p2, p3, p5 = 0, 0, 0  # 通项公式中 2， 3， 5 三个质数的指数
         for s in range(1, n):
             n2, n3, n5 = dp[p2] * 2, dp[p3] * 3, dp[p5] * 5
             dp[s] = min(n2, n3, n5)

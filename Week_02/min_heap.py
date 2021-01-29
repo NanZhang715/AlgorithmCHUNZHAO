@@ -7,7 +7,7 @@
 
 性质：
     （1）根节点 root， 数组索引从 1 开始， root_node | 1
-    （2）父节点 i/2, 返回父节点 , parent_node | i/2 
+    （2）父节点 i/2, 返回父节点 , parent_node | i/2
     （3）左节点：left_inidex = 2 * i,  left_node | 2i
     （4）右节点：right_inidex = (2 * i) + 1,  right_node | 2i +1
 
