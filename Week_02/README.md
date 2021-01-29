@@ -30,8 +30,11 @@
 **学习总结**
 
 - [堆的实现 (主要总结操作逻辑以及时间复杂度)](min_heap.py)
-- TopK： heap 和 部分快拍， 根据主定理 其中快排的时间复杂度 为O(n)， O
+- TopK： heap 和 部分快拍， 根据主定理 其中快排的时间复杂度 为O(n)
 - 排列组合： 使用 dfs, bfs, 以及必要的剪枝
   - dfs 可以解决网格中搜索问题，例如岛屿问题，[岛屿数量](numIslands.py)，[岛屿的周长](islandPerimeter.py)，[岛屿的最大面积](maxAreaOfIsland.py)，最大人工岛 （Hard）
   - [subsets 可以使用 bfs 或者 Lexicographic Subsets binmask 的方法进行解决](subset.py)
-- 递归
+- 递归三要素
+  - 终止条件
+  - level task
+  - level return
