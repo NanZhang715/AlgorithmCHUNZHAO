@@ -33,14 +33,13 @@ class Solution:
                 空间复杂度 O(1)
         """
         prev, stack = float("-inf"), []
-        # rst= []
         while stack or root:
             if root:
                 stack.append(root)
                 root = root.left
             else:
                 node = stack.pop()
-                rst.append(node.val)
+                # rst.append(node.val)
                 if node.val <= prev:
                     return False
                 prev = node.val
