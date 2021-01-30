@@ -22,6 +22,8 @@ def find_subsets_bfs(nums):
 def find_subsets_lexi(nums):
     """
     Lexicographic (Binary Sorted) Subsets
+    思路：用二进制 bitmask 表示每个位置的元素是否存在，即 000 - 111
+
     时间复杂度 O(n)
     """
     subsets = []

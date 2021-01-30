@@ -10,6 +10,7 @@
 说明:
 1. 1 是丑数。
 2. n 不超过1690
+链接：https://leetcode-cn.com/problems/chou-shu-lcof/
 """
 import heapq
 
