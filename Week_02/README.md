@@ -39,7 +39,7 @@
     - 最大人工岛
   - 矩阵中路径问题的，例如 [矩阵中的路径](exist.py)
   - 二叉树路径问题,
-    - [二叉树的所有路径](binaryTreePaths)
+    - [二叉树的所有路径](binaryTreePaths.py)
     - [求根到叶子节点数字之和](sumNumber.py)
     - [路径总和 II](pathSum.py)
 - bfs 解决子集问题

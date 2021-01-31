@@ -52,7 +52,3 @@ class Solution:
                 root = node.right
 
         return path
-
-
-    bin(2**2)
-    bin(2**3)
