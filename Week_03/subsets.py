@@ -15,7 +15,25 @@ from typing import List
 
 
 class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
+
+    def subsets_dfs(self, nums: List[int]) -> List[List[int]]:
+
+        if not nums:
+            return []
+
+        path, result = [], []
+        self.dfs(nums, 0, path, result)
+        return result
+
+    def dfs(self, nums, start, path, result):
+
+        # 所有结果都为有效结果，全部放入
+        result.append(path)
+
+        for s in range(start, len(nums)):
+            self.dfs(nums, s + 1, path + [nums[s]], result)
+
+    def subsets_lexi(self, nums: List[int]) -> List[List[int]]:
         """
         思路：bfs 或者 binmask，后者的复杂度较低
 
@@ -26,7 +44,7 @@ class Solution:
             return []
 
         n, rst = len(nums), []
-        for s in range(2**n, 2**(n+1)):
+        for s in range(2 ** n, 2 ** (n + 1)):
             bin_mask = bin(s)[3:]
 
             rst.append([nums[i] for i in range(n) if bin_mask[i] == "1"])
@@ -35,6 +53,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    nums = [1,2,3]
-    rst = Solution().subsets(nums)
+    nums = [1, 2, 3]
+    rst = Solution().subsets_dfs(nums)
     print("result is", rst)

@@ -13,6 +13,39 @@ from typing import List
 
 
 class Solution:
-    def letterCombinations(self, digits: str) -> List[str]:
 
-        return
+    def __init__(self):
+        self.digit_dict = {
+            "2": "abc", "3": "def", "4": "ghi", "5": "jkl",
+            "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz"
+        }
+
+    def letterCombinations(self, digits: str) -> List[str]:
+        """
+        思路：组合问题，使用 dfs, 每向下一层 digits少一位， 即 digits[1:]
+        """
+        if not digits:
+            return []
+
+        n, path, result = len(digits), "", []
+        self.dfs(digits, n, path, result)
+        return result
+
+    def dfs(self, digits, n, path, result):
+
+        if len(path) == n:
+            result.append(path)
+            return
+
+        for s in range(len(digits)):
+            for letter in self.digit_dict[digits[s]]:
+                self.dfs(digits[s+1:], n, path + letter, result)
+
+
+if __name__ == '__main__':
+
+    nums = "236"
+    rst = Solution().letterCombinations(nums)
+    print("result is ", rst)
+
+

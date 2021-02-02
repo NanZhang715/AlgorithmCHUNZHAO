@@ -3,7 +3,7 @@
 **简单题目**
 
 - [多数元素 （亚马逊、字节跳动、Facebook 在半年内面试中考过）](majorityElement.py)
-- 柠檬水找零（亚马逊在半年内面试中考过）
+- [柠檬水找零（亚马逊在半年内面试中考过）](lemonadeChange.py)
 - 买卖股票的最佳时机 II （亚马逊、字节跳动、微软在半年内面试中考过）
 - 分发饼干（亚马逊在半年内面试中考过）
 - 模拟行走机器人
@@ -28,3 +28,18 @@
 **学习总结**
 
 - 使用二分查找，寻找一个半有序数组 [4, 5, 6, 7, 0, 1, 2] 中间无序的地方。同学们可以将自己的思路、代码写在学习总结中。
+- 组合问题
+  - dfs 可解决
+    - [子集(无重复) subset I](subsets.py) 
+    - [子集(有重复) subset II](subsetsWithDup.py)    
+    - [组合 Combinations](Week_02/combine.py)
+    - [排列 I Permutations I](Week_02/permute.py)
+    - [排列 II Permutations II](Week_02/permuteUnique.py)  
+    - [组合总和 (可重复使用) combinationSum ](combinationSum.py)
+    - [组合总和（不可重复使用）combinationSum II ](combinationSum2.py)
+    - [组合总和 III combinationSum III](combinationSum3.py)
+  - dp 可解决    
+    - [377 组合总和 IV combinationSum IV (排列问题使用 dfs 超时, dp可解决，类似硬币找零)](combinationSum4.py)
+    - 494. 目标和
+    - 518. 零钱兑换 II（组合问题， 与组合总和 IV，递推公式一样，遍历顺序完全不同） 
+    - 322. 零钱兑换 （组合最少问题）
