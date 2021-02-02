@@ -40,6 +40,6 @@
     - [组合总和 III combinationSum III](combinationSum3.py)
   - dp 可解决    
     - [377 组合总和 IV combinationSum IV (排列问题使用 dfs 超时, dp可解决，类似硬币找零)](combinationSum4.py)
-    - 494. 目标和
-    - 518. 零钱兑换 II（组合问题， 与组合总和 IV，递推公式一样，遍历顺序完全不同） 
-    - 322. 零钱兑换 （组合最少问题）
+    - 494 目标和
+    - 518 零钱兑换 II（组合问题， 与组合总和 IV，递推公式一样，遍历顺序完全不同） 
+    - 322 零钱兑换 （组合最少问题）

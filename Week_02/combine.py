@@ -64,6 +64,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    n, k = 4, 2
+    n, k = 4, 3
     rst = Solution().combine(n, k)
     print("result is", rst)
