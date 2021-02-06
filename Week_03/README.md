@@ -13,6 +13,7 @@
 - [Pow(x, n) （Facebook 在半年内面试常考）](myPow.py)
 - [子集（Facebook、字节跳动、亚马逊在半年内面试中考过）](subsets.py)
 - [电话号码的字母组合（亚马逊在半年内面试常考）](letterCombinations.py)
+- [复原 IP 地址](restoreIpAddresses.py)  
 - 单词接龙（亚马逊在半年内面试常考）
 - 岛屿数量（近半年内，亚马逊在面试中考查此题达到 350 次）
 - 扫雷游戏（亚马逊、Facebook 在半年内面试中考过）

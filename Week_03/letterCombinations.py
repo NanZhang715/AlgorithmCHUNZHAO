@@ -8,6 +8,8 @@
 例 1：
     输入：digits = "23"
     输出：["ad","ae","af","bd","be","bf","cd","ce","cf"]
+
+链接：https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number
 """
 from typing import List
 
@@ -23,6 +25,9 @@ class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
         """
         思路：组合问题，使用 dfs, 每向下一层 digits少一位， 即 digits[1:]
+
+        时间复杂度：O(3^m + 4^n), 3个字母的个数 m， 4个 字母的个数 n， 不同字母的组合数 3^m + 4^n
+        空间复杂度：O(m+n),  递归调用层数最大 m + n
         """
         if not digits:
             return []

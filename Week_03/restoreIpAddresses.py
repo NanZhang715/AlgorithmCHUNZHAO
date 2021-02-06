@@ -37,9 +37,14 @@ class Solution:
             1. 不能包含前导 0, 必须是整数
             2. 0 ～ 255 之间
             3. 长度 大于 4 段的 终止递归
+
+        dfs的 复杂度
+        时间复杂度：O(3^4), 每一段位数不超过 3，
+        空间复杂度：O(n), IP  地址只有 4 个segment，递归栈的深度为 O(4)
+
         """
-        # if not s or len(s) < 4 or len(s) > 12:
-        #     return []
+        if not s or len(s) < 4 or len(s) > 12:
+            return []
 
         path, result = [], []
         self.dfs(s, path, result)
