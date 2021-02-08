@@ -19,3 +19,8 @@
 - 戳气球（亚马逊在半年内面试中考过）
 
 **学习总结**
+    - [XOR](find_missing_number.py)
+        - 相同元素 XOR == 0， 不同元素 XOR == 1
+        - 任何元素与 0 进行 XOR 等于 自身
+        - XOR 满足交换定理，(a^b)^c = a^(b^c),   a^b = b^a
+    - [回文字符：dp， 中心扩展， Manacher](countSubstrings)
