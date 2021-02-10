@@ -30,6 +30,19 @@ class Solution:
 
             剪枝：
                 1，下一个选择的元素不能小与之前的放入的元素， 即不能选取比之前元素小的元素
+
+          排序数组 [2,          3,           6,          7]
+
+                                    path []
+                             /       /         \   \
+                  [2]                       [3]  [6]  [7]
+                /  \    \
+            [2, 2]  [2, 3]  [2, 6] [2, 7]
+            /   \
+            [2,2, 2] [2, 2, 3] [2, 2, 6] [2, 2 ,7]
+
+            时间复杂度：O((k+n)!）,  n 是 结果的数量， k 是最大candicate 重复的数量
+            空间复杂度：O(target), 使用递归栈，最差情况需要递归 target 层
         """
 
         path, result = [], []
@@ -38,6 +51,9 @@ class Solution:
         return result
 
     def dfs(self, candidates, target, start, path, result):
+        """
+         在当前数字 start 位置
+        """
 
         if target < 0:
             return
@@ -46,6 +62,7 @@ class Solution:
             result.append(path)
             return
 
+        # 每个数字都可以无限选择, 所以下一层还可以重复选择，所以搜索的下标仍是 s
         for s in range(start, len(candidates)):
             self.dfs(candidates, target - candidates[s], s, path + [candidates[s]], result)
 

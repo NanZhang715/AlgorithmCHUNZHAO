@@ -31,7 +31,11 @@ class Solution:
 
         1。 stack
         2。 heap
+
+        时间复杂度：O(n)
+        空间复杂度：O(n)
         """
+        
 
 
 

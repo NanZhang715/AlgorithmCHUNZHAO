@@ -6,7 +6,7 @@
 - [最大正方形（华为、谷歌、字节跳动在半年内面试中考过）](maximalSquare.py)
 - [统计全为 1 的正方形子矩阵](countSquares.py)  
 - 任务调度器（Facebook 在半年内面试中常考）
-- [回文子串（Facebook、苹果、字节跳动在半年内面试中考过）](countSubstrings)
+- [回文子串（Facebook、苹果、字节跳动在半年内面试中考过）](countSubstrings.py)
 
 **困难题目**
 - 最长有效括号（字节跳动、亚马逊、微软在半年内面试中考过）
@@ -23,4 +23,4 @@
         - 相同元素 XOR == 0， 不同元素 XOR == 1
         - 任何元素与 0 进行 XOR 等于 自身
         - XOR 满足交换定理，(a^b)^c = a^(b^c),   a^b = b^a
-    - [回文字符：dp， 中心扩展， Manacher](countSubstrings)
+    - [Manacher 算法解决最长回文子串](manacher.py)
