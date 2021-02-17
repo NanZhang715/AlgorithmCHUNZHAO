@@ -25,3 +25,10 @@ class Solution:
 
 
         return
+
+
+if __name__ == '__main__':
+    word1, word2 = "horse", "ros"
+    rst = Solution().minDistance(word1, word2)
+    print("result is", rst)
+
