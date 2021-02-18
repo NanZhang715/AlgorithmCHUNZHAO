@@ -25,50 +25,53 @@ class ListNode:
 
 class Solution:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
-        """
-        思路: 每次反转 sub_list, 记录 head, tail, 结束后与前一个段连接
-        """
-        if k < 2 or not head:
-            return head
 
+        """
+        思路：
+
+        Before:
+
+        [ 1,  2]  ->      [3  ->  4] ->  [5,  6]
+              |            |
+            prev          cur
+            prev_tail   sub_tail
+
+        After:
+
+        [ 1,  2 ] ->       [ 3  <-   4 ] ->  [5, 6]
+              |             |       |         |
+              |             |     prev       cur
+            prev_tail   sub_tail
+
+        """
         prev, cur = None, head
-        while True:
-            last_node_prev = prev  # 前一段的的最后一个 node
-            last_node_sub = cur  # 当前 sublist 的 cur 反转后成为最后一个 node
 
-            if not self.length_larger_k(cur, k):  # 判断接下来的链表是否满足反转的条件
-                break
+        while self.check_length(cur, k):
 
-            tmp, count = None, 0  # 创建两个临时变量
-            while cur and count < k:
-                # tmp = cur.next
-                # cur.next = prev
-                # prev = cur
-                # cur = tmp
+            first_tail, sub_tail = prev, cur
+
+            for _ in range(k):
                 cur.next, prev, cur = prev, cur, cur.next
-                count += 1
-            print(prev.value, cur.value) # 反转完成 prev， cur 下一个 sublist的 head
 
-            # 连接前一段链表
-            if last_node_prev:
-                last_node_prev.next = prev
+            # 连接前一段
+            if first_tail:
+                first_tail.next = prev
             else:
                 head = prev
 
-            # 连接后一段链表
-            last_node_sub.next = cur
+            # 连接后一段
+            sub_tail.next = cur
 
-            # if not cur: break
-            prev = last_node_sub
+            prev = sub_tail
+
         return head
 
-    def length_larger_k(self, head, k):
-        """
-        判断 链表长度是否 大于 k
-        """
-        while head and k - 1:
+    def check_length(self, head, n):
+
+        while head and n - 1:
             head = head.next
-            k -= 1
+            n -= 1
+
         return isinstance(head, ListNode)
 
 

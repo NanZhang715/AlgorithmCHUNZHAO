@@ -16,6 +16,7 @@
 - [最长公共子序列（字节跳动、谷歌、亚马逊在半年内面试中考过）](longestCommonSubsequence.py)
 - [不同路径（Facebook、亚马逊、微软在半年内面试中考过）](uniquePaths.py)
 - [不同路径 II （谷歌、美团、微软在半年内面试中考过）](uniquePathsWithObstacles.py)
+- [最低票价](mincostTickets.py)
 
 **实战题目**
 - [打家劫舍（字节跳动、谷歌、亚马逊在半年内面试中考过）](rob.py)
