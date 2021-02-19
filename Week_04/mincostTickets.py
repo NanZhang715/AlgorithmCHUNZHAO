@@ -36,17 +36,18 @@ class Solution:
         dp = [0] * (days[-1] + 1)
         for s in range(1, len(dp)):
             if s not in set(days):
-                dp[s] = dp[s-1]
+                dp[s] = dp[s - 1]
             else:
-                dp[s] = min(dp[max(0, s - 1)] + costs[0],
-                            dp[max(0, s - 7)] + costs[1],
-                            dp[max(0, s - 30)] + costs[2])
+                dp[s] = min(
+                    dp[max(0, s - 1)] + costs[0],
+                    dp[max(0, s - 7)] + costs[1],
+                    dp[max(0, s - 30)] + costs[2]
+                )
 
         return dp[-1]
 
 
 if __name__ == '__main__':
-
     days, costs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31], [2, 7, 15]
     rst = Solution().mincostTickets(days, costs)
     print("resultr is", rst)
