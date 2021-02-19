@@ -13,7 +13,7 @@
 查并集：https://www.hackerearth.com/practice/notes/disjoint-set-union-union-find/
 """
 
-from collections import defaultdict
+from typing import List
 
 
 class DisjointSet:
@@ -30,6 +30,7 @@ class DisjointSet:
         初始化节点
         """
         self.parent = [s for s in range(n)]
+        self.count = 0
 
     def find(self, s):
         """
@@ -50,29 +51,42 @@ class DisjointSet:
         """
         parent_u, parent_v = self.find(u), self.find(v)
         self.parent[parent_u] = parent_v
+        self.count -= 1
 
     def connected(self, u, v):
         return self.find(u) == self.find(v)
 
 
+class Solution:
+    def findCircleNum(self, isConnected: List[List[int]]) -> int:
+
+        """
+        思路： 并查集
+
+        时间复杂度：O(N^2*logN), 遍历所有节点 N^2， 遇到相连 2次查找， 1次合并， 一共 2N^2查找， N^2合并
+        空间复杂度：O(N)
+        """
+
+        if not isConnected:
+            return 0
+
+        n = len(isConnected)
+        disjoint = DisjointSet(n)
+        for i in range(n):
+            for j in range(i, n):
+                if isConnected[i][j] == 1:
+                    disjoint.union(i, j)
+        print(disjoint.parent)
+        return sum(disjoint.parent[i] == i for i in range(n))
+
+
 if __name__ == '__main__':
-
-    isConnected = [[1, 1, 0],
-                   [1, 1, 0],
-                   [0, 0, 1]]
-    n = len(isConnected)
-    disjoint = DisjointSet(n)
-    for i in range(n):
-        for j in range(i, n):
-            if isConnected[i][j] == 1:
-                disjoint.union(i, j)
-
-
-
-
-
-
-
-
-
-
+    # isConnected = [[1, 1, 0],
+    #                [1, 1, 0],
+    #                [0, 0, 1]]
+    isConnected = [[1, 0, 0, 1],
+                   [0, 1, 1, 0],
+                   [0, 1, 1, 1],
+                   [1, 0, 1, 1]]
+    rst = Solution().findCircleNum(isConnected)
+    print("result is", rst)
