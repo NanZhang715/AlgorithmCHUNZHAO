@@ -44,7 +44,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    # nums = [3, 4, 5, 1, 2]
-    nums = [1, 5, 0, 0, 0]
+    nums = [3, 4, 5, 1, 2]
+    # nums = [1, 5, 0, 0, 0]
     rst = Solution().findMin(nums)
     print("result is", rst)

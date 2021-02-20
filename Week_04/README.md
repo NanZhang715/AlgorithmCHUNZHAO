@@ -1,4 +1,4 @@
-**学习总结**
+**Week 4 学习总结**
 
 **中等题目**
 - [爬楼梯（（阿里巴巴、腾讯、字节跳动在半年内面试常考））](climbStairs.py)
@@ -17,6 +17,7 @@
 - [不同路径（Facebook、亚马逊、微软在半年内面试中考过）](uniquePaths.py)
 - [不同路径 II （谷歌、美团、微软在半年内面试中考过）](uniquePathsWithObstacles.py)
 - [最低票价](mincostTickets.py)
+- [乘积小于K的子数组](numSubarrayProductLessThanK.py)
 
 **实战题目**
 - [打家劫舍（字节跳动、谷歌、亚马逊在半年内面试中考过）](rob.py)
