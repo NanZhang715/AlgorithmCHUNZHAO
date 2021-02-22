@@ -21,6 +21,8 @@
 - [搜索旋转排序数组（Facebook、字节跳动、亚马逊在半年内面试常考）](search.py)
 - [搜索二维矩阵（亚马逊、微软、Facebook 在半年内面试中考过）](searchMatrix.py)
 - [寻找旋转排序数组中的最小值（亚马逊、微软、字节跳动在半年内面试中考过）](findMin.py)
+- [寻找峰值 (旋转数组的变形)](findPeakElement.py)
+- [完全二叉树的节点个数](countNodes.py)
 
 **困难题目**
 - [N 皇后（字节跳动、苹果、谷歌在半年内面试中考过）](solveNQueens.py)
