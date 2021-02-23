@@ -30,7 +30,7 @@ class Solution:
           4   5   6     ----- level 3
 
         背景知识
-            (1) 完全二叉树节点树，最后一层节点索引范围 (2^(n-1), (2^n) - 1]
+            (1) 完全二叉树节点树，最后一层节点索引范围 [2^(n-1), (2^n) - 1)
             (2) 判断 二叉树 index 节点是否存在
                 - index 的二进制 "0" - 左子树， "1" 右子树
                 - 通过位运算得到第 k 个节点的路径
@@ -49,7 +49,7 @@ class Solution:
 
         while left < right:
             mid = left + (right - left + 1) // 2  # 向上取整
-            print(left, mid, right)
+            # print(left, mid, right)
             if self.is_valid(mid, root):
                 left = mid
             else:
@@ -84,6 +84,6 @@ if __name__ == '__main__':
     root.left.right = TreeNode(5)
     # root.right.left = TreeNode(6)
 
-    # print("depth is", Solution().get_depth(root))
+    print("depth is", Solution().get_depth(root))
     print("index 5 is", Solution().is_valid(5, root))
     print("result is", Solution().countNodes(root))

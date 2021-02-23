@@ -24,6 +24,8 @@ class Solution:
                 arr[mid] < target,   位于 l2 中,  right 可能就是 最小值
                 arrp[mid] == target, 不能确定答案, 就让右边界 减 1
 
+            c此方法也可以同时解决有重复数字出现的现象
+
           时间复杂度：O(logn)
           空间复杂度：O(1)
         """
@@ -44,7 +46,8 @@ class Solution:
 
 
 if __name__ == '__main__':
-    nums = [3, 4, 5, 1, 2]
+    # nums = [3, 4, 5, 1, 2]
+    nums = [3, 1, 2]
     # nums = [1, 5, 0, 0, 0]
     rst = Solution().findMin(nums)
     print("result is", rst)
