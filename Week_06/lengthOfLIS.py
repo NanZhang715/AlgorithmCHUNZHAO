@@ -36,7 +36,7 @@ class Solution:
             for j in range(i):
                 if nums[j] < nums[i]:
                     dp[i] = max(dp[j] + 1, dp[i])
-        return dp[-1]
+        return max(dp)
 
 
 if __name__ == '__main__':
