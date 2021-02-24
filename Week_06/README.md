@@ -29,5 +29,6 @@
 
 **学习总结**
 - [快速排序](quick_sort.py)
-- [归并排序](merge_sort.py)  
+- [归并排序](merge_sort.py) 
+- [前 K 个高频元素](topKFrequent.py)  
 - 在学习总结中，写出不同路径 2 这道题目的状态转移方程（选学）。

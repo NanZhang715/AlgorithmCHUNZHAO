@@ -19,10 +19,10 @@ def partition(nums, beg, end):
 
     while True:
 
-        while left <= right and nums[left] < pivot:
+        while left <= right and nums[left] <= pivot:
             left += 1
 
-        while left <= right and nums[right] >= pivot:
+        while left <= right and nums[right] > pivot:
             right -= 1
 
         if left > right:
@@ -31,11 +31,13 @@ def partition(nums, beg, end):
             nums[left], nums[right] = nums[right], nums[left]
 
     nums[right], nums[pivot_index] = nums[pivot_index], nums[right]
+    # print(nums)
 
     return right
 
 
 if __name__ == '__main__':
-    nums = [3, 4, 7, 2, 2, 18, 12]
+    # nums = [3, 4, 7, 2, 2, 3, 3, 18, 12]
+    nums = [1, 2, 4, 1]
     quick_sort(nums, 0, len(nums))
     print("result is", nums)
