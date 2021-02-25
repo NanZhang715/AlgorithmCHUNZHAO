@@ -33,6 +33,7 @@ class Solution:
             count = [0] * 26
             for char in s:
                 count[ord(char) - ord("a")] += 1
+            # print(count)
             # 需要将 list 转换成 tuple 才能进行哈希
             ans[tuple(count)].append(s)
         return list(ans.values())
