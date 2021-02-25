@@ -46,7 +46,8 @@ class Solution:
                 five, ten = five - 1, ten - 1
             else:
                 five -= 3
-            if five < 0: return False
+            if five < 0:
+                return False
         return True
 
 
