@@ -28,7 +28,7 @@ class Solution:
         stack, rst = [], [0] * n  # 创建辅助单调 stack， 以及与输入数组相同长度的数组作为输出
 
         for k, v in enumerate(T):
-            while stack and v > T[stack[-1]]:
+            while stack and v > T[stack[-1]]:  # 依次和 stack 内元素对比，找到之前元素的答案
                 tmp = stack.pop()
                 rst[tmp] = k - tmp
             stack.append(k)
