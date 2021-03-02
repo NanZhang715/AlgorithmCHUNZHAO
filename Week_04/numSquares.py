@@ -19,6 +19,8 @@ class Solution:
         思路：动态规划, 类似硬币找零
         c 是待用 完全平方数
         dp[i] = min(dp[i-c] +1)
+
+        初始条件：f(0) = 0
         """
         square_nums = [s*s for s in range(1, int(n**0.5)+1)]
         dp = [float("inf")] * (n+1)
@@ -27,10 +29,11 @@ class Solution:
             for s in square_nums:
                 if i >= s:
                     dp[i] = min(dp[i], dp[i-s] + 1)
+        print(dp)
         return dp[-1]
 
 
 if __name__ == '__main__':
-    n = 13
+    n = 2
     rst = Solution().numSquares(n)
     print("result is", rst)

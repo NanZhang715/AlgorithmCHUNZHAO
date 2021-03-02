@@ -26,3 +26,44 @@
 
 链接：https://leetcode-cn.com/problems/minimum-genetic-mutation
 """
+from typing import List
+from collections import defaultdict
+from collections import deque
+
+
+class Solution:
+    def minMutation(self, start: str, end: str, bank: List[str]) -> int:
+        """
+         思路： bfs， 每次变异一位
+        """
+        if end not in bank or not end or not bank:
+            return -1
+
+        bank_dict = defaultdict(list)
+        for s in bank:
+            for i in range(8):
+                bank_dict[s[:i] + "*" + s[i+1:]].append(s)
+
+        queue = deque([(start, 1)])
+        visited = set()
+        visited.add(start)
+
+        while queue:
+            mutation, level = queue.popleft()
+            for s in range(8):
+                candidate = mutation[:s] + "*" + mutation[s+1:]
+                for m in bank_dict[candidate]:
+                    if end == m:
+                        return level
+                    if m not in visited:
+                        queue.append((m, level + 1))
+                        visited.add(m)
+
+        return -1
+
+
+if __name__ == '__main__':
+
+    start, end, bank = "AACCTTGG", "AATTCCGG", ["AATTCCGG","AACCTGGG","AACCCCGG","AACCTACC"]
+    rst = Solution().minMutation(start, end, bank)
+    print("result is", rst)
