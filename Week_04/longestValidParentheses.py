@@ -47,6 +47,7 @@ class Solution:
                     dp[i] = dp[i-2] + 2
                 elif i - dp[i-1] - 1 >= 0 and s[i-dp[i-1]-1] == '(':
                     dp[i] = dp[i-1] + dp[i - dp[i-1] - 2] + 2
+
         return max(dp)
 
 

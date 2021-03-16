@@ -29,7 +29,7 @@ class Solution:
         时间复杂度：O(n)
         空间复杂度：O(1)
         """
-        reach, end, count, n = 0, 0, 0, len(nums) - 1
+        reach, end, count = 0, 0, 0
 
         for k, v in enumerate(nums[:-1]):
             if k <= reach:

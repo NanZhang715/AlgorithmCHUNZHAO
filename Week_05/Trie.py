@@ -43,5 +43,6 @@ if __name__ == '__main__':
     word, prefix = "apple", "app"
     obj = Trie()
     obj.insert(word)
+    obj.insert("apana")
     print(obj.search(word))
     print(obj.startsWith(prefix))

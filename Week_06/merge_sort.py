@@ -24,7 +24,6 @@ def merge(left, right):
             result.append(left.pop(0))
         else:
             result.append(right.pop(0))
-
     if left:
         result += left
     if right:

@@ -34,7 +34,7 @@ from collections import deque
 class Solution:
     def minMutation(self, start: str, end: str, bank: List[str]) -> int:
         """
-         思路： bfs， 每次变异一位
+         思路： bfs， 每次变异一位, 与单词接龙基本一致
         """
         if end not in bank or not end or not bank:
             return -1
@@ -44,7 +44,7 @@ class Solution:
             for i in range(8):
                 bank_dict[s[:i] + "*" + s[i+1:]].append(s)
 
-        queue = deque([(start, 1)])
+        queue = deque([(start, 0)])
         visited = set()
         visited.add(start)
 
@@ -54,7 +54,7 @@ class Solution:
                 candidate = mutation[:s] + "*" + mutation[s+1:]
                 for m in bank_dict[candidate]:
                     if end == m:
-                        return level
+                        return level + 1
                     if m not in visited:
                         queue.append((m, level + 1))
                         visited.add(m)

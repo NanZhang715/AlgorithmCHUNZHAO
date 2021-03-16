@@ -30,7 +30,7 @@ class Solution:
         ans = 0
 
         while left <= right:
-            if left_max < right_max:
+            if left_max < right_max: # left_max 较小时， 由 蓄水量由 left_max 决定
                 ans += left_max - height[left]
                 left += 1
                 left_max = max(left_max, height[left])

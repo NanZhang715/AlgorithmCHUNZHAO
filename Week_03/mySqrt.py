@@ -40,13 +40,44 @@ class Solution:
         if num < 2:
             return num
 
-        s = x // 2  # 从 1/2 处开始查找
-        while s * s > x:
-            s = (s + num / s) // 2
-        return int(num)
+        s = num // 2  # 从 1/2 处开始查找
+        while True:
+            s = (s + num / s) / 2
+            if abs(s * s - num) < 1e-7:
+                break
+        return s
+
+    def cubeSqrt(self, num):
+
+        """
+        s^3 - num = 0
+        f'= 3s^2
+        s - f/f` = s - (S^3 - num)/3s^2 = (3S^3 - S^3 + num)/3s^2
+                 = (2s + num/s^2) /3
+        """
+        if not num:
+            return num
+
+        if num < 0:
+            return -self.utils(-num)
+        else:
+            return self.utils(num)
+
+    def utils(self, num):
+
+        s = num / 3
+        while True:
+            s = (2 * s + num / (s * s)) / 3
+            if abs(s * s * s - num) < 1e-7:
+                break
+            print(s)
+        return s
 
 
 if __name__ == '__main__':
-    x = 8
-    rst = Solution().mySqrt(x)
-    print("result is ", rst)
+    x = -5.6
+    # sqrt = Solution().mySqrt(x)
+    # print("sqrt is ", sqrt)
+
+    cube = Solution().utils(x)
+    print("cube srqt is", cube)

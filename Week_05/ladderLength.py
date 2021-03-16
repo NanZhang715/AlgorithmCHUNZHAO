@@ -50,6 +50,8 @@ class Solution:
                         l*g : log
                         c*g: cog
                         co* : cog}
+        时间复杂度：O(N*C^2), N 为 wordList 长度， C 为列表中单词的长度
+        空间复杂度：O(N*C^2),
         """
 
         if endWord not in wordList or not beginWord or not endWord or not wordList:
